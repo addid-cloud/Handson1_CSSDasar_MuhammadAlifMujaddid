@@ -12,6 +12,7 @@ body{
 
 }
 
+
 .login-card{
     width: 450px;
     background: #1c439b;
@@ -19,6 +20,9 @@ body{
     /* border-radius: 10px; */
     position: relative;
     z-index: 10000;
+    animation-name: y;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 .login-card::before{
@@ -31,11 +35,35 @@ body{
     bottom: 40px;
     transform: rotate(-3deg);
     z-index: -1;
+   
+
 }
+
+
+@keyframes y {
+    0%{ background-color: #e5e5e5;}
+    50%{background-color: #163b90;}
+    100%{background-color: #e5e5e5;}
+    
+}
+
 
 .login-card-logo img{
     width: 60px;
+    position: relative;
+    z-index: 100;
+    animation-name: x;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
+
+
+@keyframes x{
+    0%{top:0px;}
+    50%{top: 30px;}
+    100%{top:0px;}
+}
+
 .login-card-logo,
 .login-card-header,
 .login-card-footer{
